@@ -78,7 +78,7 @@ repositories {
         url = 'https://babbaj.github.io/maven/'
     }
     flatDir {
-        dirs '../baritone/dist'
+        dirs '../baritone/dist', '../../libs'
     }
 }
 
@@ -117,6 +117,9 @@ dependencies {
     }
     //modImplementation 'baritone-api-fabric:baritone-api-fabric:1.6.3'
     //implementation files('baritone-plus/build/libs/baritone-unoptimized-fabric-1.6.3.jar')
+
+    // Meteor
+    implementation name: 'meteor-client-0.5.8'
 }
 shadowJar {
     configurations = [project.configurations.shadow]
